@@ -48,7 +48,7 @@ res <- results(dds)
 res$Gene_ID <- sub("gene:", "", rownames(res))
 
 # Export results to a CSV file
-write.csv(res, "outputs/DESeq2/GSE262612_DESeq2.csv", row.names = FALSE)
+write.csv(res, "outputs/DESeq2/GSE262612.csv", row.names = FALSE)
 
 # Get Normalized counts
 normalized_counts <- counts(dds, normalized=TRUE) |>
